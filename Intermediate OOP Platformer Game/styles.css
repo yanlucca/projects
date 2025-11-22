@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #0d0221;       /* Deep Space */
+  --section-bg-color: #1a0538;    /* Purple Shadow */
+  --accent-1: #7a2cff;            /* Neon Violet */
+  --accent-2: #22d3ee;            /* Electric Cyan */
+  --text-light: #f3e8ff;
+}
+
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-light);
+}
+
+.start-screen {
+  background: linear-gradient(145deg, #1a0538, #120227);
+  box-shadow: 0 0 25px rgba(122, 44, 255, 0.5);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  padding: 20px;
+  padding-bottom: 5px;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 15px;
+  line-height: 2rem;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  color: #0a0a23;
+  font-size: 18px;
+  background-color: var(--accent-1);
+  background-image: linear-gradient(#8c46ff, #6a1eff);
+  border-color: var(--accent-2);
+  color: white;
+  border-width: 3px;
+}
+
+.btn:hover {
+  background-image: linear-gradient(#9e63ff, #7a2cff);
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkpoint-screen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  border-radius: 20px;
+  padding: 10px;
+  display: none;
+}
+
+#canvas {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .start-screen {
+    width: 60%;
+    max-width: 700px;
+  }
+
+  .checkpoint-screen {
+    max-width: 300px;
+  }
+}
